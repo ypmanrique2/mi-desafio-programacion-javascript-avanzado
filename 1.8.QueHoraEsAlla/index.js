@@ -50,3 +50,15 @@ const zonasHorarias = [
     }
 ];
 
+const ms_horas = 1000 * 60 * 60;
+
+for(const zona of zonasHorarias){
+    console.log(`${zona.texto}: ${calcularZonaHoraria(zona.offset)}`);
+}
+
+function calcularZonaHoraria(offset){
+    const hoy = new Date();
+    const utc = hoy.getTime();
+    const zonaTiempo = new Date(utc + (offset * ms_horas));
+    return zonaTiempo.toLocaleString();
+}
