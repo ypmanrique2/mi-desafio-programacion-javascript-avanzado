@@ -4,7 +4,7 @@ const input2 = document.getElementById('input-2');
 const sumar = document.getElementById('sumar');
 const restar = document.getElementById('restar');
 const multiplicar = document.getElementById('multiplicar');
-const division = document.getElementById('dividir');
+const division = document.getElementById('divisar');
 
 const resultado = document.getElementById('resultado');
 
@@ -14,25 +14,25 @@ multiplicar.addEventListener('click', ejecutarOperacion);
 division.addEventListener('click', ejecutarOperacion);
 
 
-// Escribir un proxi que controle el acceso a las propiedades
-// de un objeto que contenga la información de una operación matemáticas.
+// Escribir un Proxy que controle el acceso a las propiedades
+// de un objeto que contenga la información una operación matemática.
 
 const plantilla = { valor1: null, valor2: null, operador: null };
 
 const handler = {
-    get: (target, key)=> {
+    get: (target, key)=>{
         if(key === 'valor1'){
-            return input1.value === ''? 0 : parseInt (input1.value);
+            return input1.value === ''? 0 : parseInt(input1.value);
         }
 
-        if(key === 'valor1'){
-            return input2.value === ''? 0 : parseInt (input2.value);
+        if(key === 'valor2'){
+            return input2.value === ''? 0 : parseInt(input2.value);
         }
         return target[key];
     }
 }
 
-const proxy = new Proxy (plantilla, handler);
+const proxy = new Proxy(plantilla, handler);
 
 function calcularResultado() {
     let total;
@@ -55,6 +55,6 @@ function calcularResultado() {
 }
 
 function ejecutarOperacion(evento) {
-    proxy.operador = evento.target.innerText;   
+    proxy.operador = evento.target.innerText;
     calcularResultado();
 }

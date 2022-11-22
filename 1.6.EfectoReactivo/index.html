@@ -1,48 +1,32 @@
-<!DOCTYPE HTML>
-<html lang="es-419">
-	<head>
-		<meta charset="UTF-8">
-		<title>Calculadora</title>
-		<!-- bootstrap - link cdn -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<script src="js/index.js"></script>
-		<script type="text/javascript"></script>
-	</head>
-	<body>
-		<div class="container">
-			<div class="jumbotron">
-				<h1>CALCULADORA</h1>
-			</div>
-			<hr />
-			<div class="row">
-				<div class="col-md-4">
-					<input id="numero1" type="text" class="form-control" placeholder="Digite un número" />
-				</div>
-				<div class="col-md-4">
-					<select id="calcularResultado" class="form-control">
-						<option value="">--Selecione una operación</option>
-						<option value="1">Sumar</option>
-						<option value="2">Multiplicar</option>
-						<option value="3">Restar</option>
-						<option value="4">División</option>
-					</select>
-				</div>
-				<div class="col-md-4">
-					<input id="numero2" type="text" class="form-control" placeholder="Digite un número"/>
-				</div>
-			</div>
-			<hr />
-			<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-4"></div>
-				<div class="col-md-4">
-					<button type="button" class="btn btn-lg btn-primary pull-right" onclick="ejecutarOperacion()">Calcular</button>
-				</div>
-			</div>
-			<hr />
-			<div class="well">
-				Resultado: <input id="calcularResultado" type="text" class="form-control" readonly/>
-			</div>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Desafío JS - Efecto reactivo</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Calculadora</h1>
+        <input type="number" id="input-1">
+        <input type="number" id="input-2">
+        <div class="contenedor">
+            <div class="fila-butones">
+                <button id="sumar">+</button>
+                <button id="restar">-</button>
+            </div>
+            <div class="fila-butones">
+                <button id="multiplicar">*</button>
+                <button id="divisar">/</button>
+            </div>
+        </div>
+        <span id="resultado">resultado</span>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
 </html>
