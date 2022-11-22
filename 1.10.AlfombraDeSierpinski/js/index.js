@@ -26,7 +26,7 @@ function dibujarFractal(x, y, w, repeticiones) {
 
 }
 
-dibujarFractal(0, 0, tamanoStage, repeticionesTotales);                                                                                                     
+dibujarFractal(0, 0, tamanoStage, repeticionesTotales);
 
 function generarCuadrado(w, x, y) {
     const cuadrado = document.createElement('div');
